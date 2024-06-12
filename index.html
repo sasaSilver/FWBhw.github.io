@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Obochina Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div>
             <h1 id="my-name">Aleksandr Mikhailov</h1>
             <div id="intro-container">
@@ -14,26 +15,26 @@
             </div>
         </div>
         <div style="display: flex; align-items: center;">
-            <img id="pfp" src="images/pfp.jpg">
-            <ul id="aka-dropdown">
-                <li>ob0china <a href="https://t.me/ob0china" target="_blank"><img src="./images/telegram-icon.png"></a>
-                             <a href="https://discord.com/users/666705545633333248" target="_blank"><img src="./images/discord-icon.png"></a>
+            <img id="pfp" src="images/pfp.jpg" alt="me">
+            <ul class="aka-dropdown">
+                <li>ob0china <a id="tg-link" href="https://t.me/ob0china" target="_blank"><img src="./images/telegram-icon.png" alt="tg-link"></a>
+                             <a href="https://discord.com/users/666705545633333248" target="_blank"><img src="./images/discord-icon.png" alt="disc-link"></a>
                 </li>
-                <li>sasaSilver <a href="https://github.com/sasaSilver" target="_blank"><img src="./images/github-mark-white.png"></li></a>
-                <li> mhlvsasha <a href="mailto:mhlvsasha@gmail.com" target="_blank"><img src="images/gmail-icon.png"></a></li>
-                <li>Silver_Chaeiot <a href="https://osu.ppy.sh/users/16321509" target="_blank"><img src="./images/osu-icon.png"></li></a>
-                <li>puffy licker <a href="https://steamcommunity.com/id/0bochina/" target="_blank"><img src="./images/steam-icon.png"></li></a>
+                <li>sasaSilver <a id="gh-link" href="https://github.com/sasaSilver" target="_blank"><img src="./images/github-mark-white.png" alt="gh-link"></a></li>
+                <li>mhlvsasha <a id="email" href="mailto:mhlvsasha@gmail.com" target="_blank"><img src="images/gmail-icon.png" alt="email"></a></li>
+                <li>Silver_Chaeiot <a href="https://osu.ppy.sh/users/16321509" target="_blank"><img src="./images/osu-icon.png" alt="osu-link"></a></li>
+                <li>puffy licker <a href="https://steamcommunity.com/id/0bochina/" target="_blank"><img src="./images/steam-icon.png" alt="steam-link"></a></li>
             </ul>
         </div>
     </header>
     <main>
-        <div class="section-container">
+        <div id="about-section" class="section-container">
             <h2>About me</h2>
             <div class="content-container">
                 <div id="about-content" style="display: inline;">Hi there! Currently I am a bachelor student of </div><a href="https://innopolis.university/en/">Innopolis University!</a>
             </div>
         </div>
-        <div class="section-container">
+        <div id="skills-section" class="section-container">
             <h2>
                 My skills
             </h2>
@@ -48,35 +49,30 @@
                 </ul>
             </div>
         </div>
-        
-        <div class="section-container">
+        <div id="link-container" class="section-container">
             <h2>Social links</h2>
             <div class="content-container">
-                <ul id="aka-dropdown">
-                    <li>ob0china <a href="https://t.me/ob0china" target="_blank"><img src="./images/telegram-icon.png"></a>
-                                 <a href="https://discord.com/users/666705545633333248" target="_blank"><img src="./images/discord-icon.png"></a>
+                <ul class="aka-dropdown">
+                    <li>ob0china <a href="https://t.me/ob0china" target="_blank"><img src="./images/telegram-icon.png" alt="tg-link"></a>
+                                 <a href="https://discord.com/users/666705545633333248" target="_blank"><img src="./images/discord-icon.png" alt="ds-link"></a>
                     </li>
-                    <li>sasaSilver <a href="https://github.com/sasaSilver" target="_blank"><img src="./images/github-mark-white.png"></li></a>
-                    <li> mhlvsasha <a href="mailto:mhlvsasha@gmail.com" target="_blank"><img src="images/gmail-icon.png"></a></li>
-                    <li>Silver_Chaeiot <a href="https://osu.ppy.sh/users/16321509" target="_blank"><img src="./images/osu-icon.png"></li></a>
-                    <li>puffy licker <a href="https://steamcommunity.com/id/0bochina/" target="_blank"><img src="./images/steam-icon.png"></li></a>
+                    <li>sasaSilver <a href="https://github.com/sasaSilver" target="_blank"><img src="./images/github-mark-white.png" alt="gh-link"></a></li>
+                    <li> mhlvsasha <a href="mailto:mhlvsasha@gmail.com" target="_blank"><img src="images/gmail-icon.png" alt="email"></a></li>
+                    <li>Silver_Chaeiot <a href="https://osu.ppy.sh/users/16321509" target="_blank"><img src="./images/osu-icon.png" alt="osu-link"></a></li>
+                    <li>puffy licker <a href="https://steamcommunity.com/id/0bochina/" target="_blank"><img src="./images/steam-icon.png" alt="steam-link"></a></li>
                 </ul>
             </div>  
         </div>
     </main>
     
     <footer>
-    <!-- <img id="spongebob" src="images/spongebob.png" alt="spongebob"> -->
     <ul id="navbar-list">
-        <li class="immutable"><img id="menu-icon" src="./images/menu-icon.png" alt=""></li>
-        <a href=""> <li>Home</li> </a>
-        <a href=""> <li>About</li> </a>
-        <a href=""> <li>Portfolio</li> </a>
-        <a href=""> <li>Social links</li> </a>
+        <li class="immutable"><img id="menu-icon" src="./images/menu-icon.png" alt="menu-icon"></li>
+         <li><a href="#header">Home</a></li> 
+         <li><a href="#about-section">About</a></li> 
+         <li><a href="#skills-section">Portfolio</a></li> 
+         <li><a href="#links-section">Social links</a></li> 
     </ul>
     </footer> 
-
-
 </body>
-
 </html>
