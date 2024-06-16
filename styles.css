@@ -1,8 +1,6 @@
 :root{
-    --purp: #ffffff;
-    --dark-purp: #604CC3;
-    --dark-orange: #f4eaad;
-    --dark-text: rgb(29,26,47);
+    --yellow: #f4eaad;
+    --beige: rgb(248, 241, 233);
 }
 
 *{
@@ -40,7 +38,7 @@ body{
 
 header{
     /* background-color:rgb(248, 241, 233); */
-    background-image: linear-gradient(rgb(248, 241, 233), rgb(248, 241, 233), white);
+    background-image: linear-gradient(rgb(248, 241, 233), rgb(248, 241, 233),rgb(248, 241, 233), white);
     font-size: 1.5rem;
     margin-top: -1.4em;
     position: relative;
@@ -185,8 +183,8 @@ main{
 #links-section{
     margin: 0 -8vw;
     padding: 0 8vw;
-    background-color: rgb(248, 241, 233);
     width: 100vw;
+    background-image: linear-gradient(white, var(--beige), var(--beige));
 }
 
 #links-section img{
@@ -205,7 +203,7 @@ main{
 }
 
 footer{
-    background-color: var(--dark-orange);
+    background-color: var(--yellow);
     position:fixed;
     bottom: 0;
     width: 100%;
