@@ -56,6 +56,7 @@ header{
     height: 100vh;
     width: 100vw;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 
@@ -63,7 +64,6 @@ header{
     border-radius: 50%;
     width: 9em;
     height: 9em;
-    margin-left: 3em;
 }
 
 #my-name{
@@ -82,11 +82,9 @@ header{
 }
 
 #occupation-container{
-    margin: 0;
     font-size: inherit;
     position: relative;
 }
-
 
 #soon-to-be{
     float: right;
@@ -234,8 +232,8 @@ footer{
     cursor: pointer;
 }
 
-#navbar-list li:hover{
-    background-color: #bbb16f;
+.hover-yellow:hover {
+    background-color: #ccc070;
 }
 
 #navbar-list li > *{
@@ -268,5 +266,10 @@ footer a{
 }
 
 #comic-link{
-    background-color: rgb(231, 145, 145);
+    background-color: rgb(253, 191, 191);
+}
+
+#comic-link:hover {
+    outline: 1px solid rgb(149, 76, 76);
+    background-color: rgb(205, 134, 134);
 }
