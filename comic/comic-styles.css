@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+img{
+    object-fit: contain;
+}
+
+div {
+    margin: 2em;
+}
