@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fetchComicId(email) {
+            const searchParams = new URLSearchParams({
+                email: `${email}`
+            });
+            const response = await fetch("https://fwd.innopolis.university/api/hw2?" + searchParams);
+            const comicId = await response.json();
+            return comicId;
+        }
+        async function fetchComicData(email) {
+            const comicId = await fetchComicId(email);
+            const searchParams = new URLSearchParams({
+                id: comicId
+            });
+            const comicData = await fetch("https://fwd.innopolis.university/api/comic?" + searchParams);
+            return comicData.json();
+        }
+        async function displayComic(email) {
+            const comicData = await fetchComicData(email);
+            const imgElement = document.createElement("img");
+            imgElement.src = comicData.img;
+            imgElement.alt = comicData.alt;
+            const imgTitle = document.createElement("h2");
+            imgTitle.textContent = comicData.safe_title;
+            const imgDate = new Date(comicData.year, comicData.month, comicData.day);
+            const dateElement = document.createElement("p");
+            dateElement.textContent = imgDate.toLocaleDateString();
+            document.body.appendChild(imgElement);
+            document.body.appendChild(imgTitle);
+            document.body.appendChild(dateElement);
+        }
+        const email = "al.mikhailov@innopolis.university";
+        displayComic(email);
+    </script>
+</body>
+</html>
