@@ -29,14 +29,16 @@
             const imgElement = document.createElement("img");
             imgElement.src = comicData.img;
             imgElement.alt = comicData.alt;
-            const imgTitle = document.createElement("h2");
-            imgTitle.textContent = comicData.safe_title;
+            const titleElement = document.createElement("h2");
+            titleElement.textContent = comicData.safe_title;
             const imgDate = new Date(comicData.year, comicData.month, comicData.day);
             const dateElement = document.createElement("p");
             dateElement.textContent = imgDate.toLocaleDateString();
-            document.body.appendChild(imgElement);
-            document.body.appendChild(imgTitle);
-            document.body.appendChild(dateElement);
+            const comicContainer = document.createElement("div");
+            comicContainer.appendChild(imgElement);
+            comicContainer.appendChild(titleElement);
+            comicContainer.appendChild(dateElement);
+            document.body.appendChild(comicContainer);
         }
         const email = "al.mikhailov@innopolis.university";
         displayComic(email);
