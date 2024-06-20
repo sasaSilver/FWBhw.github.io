@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -10,10 +11,15 @@ body{
     text-align: center;
 }
 
-img{
-    object-fit: contain;
+div {
+    margin: auto;
+    margin-top: 3em;
+    padding: 1em;
+    border: 2px solid gray;
+    background-color: rgb(233, 232, 232);
+    width: fit-content;
 }
 
-div {
-    margin: 3em;
+p{
+    font-style: italic;
 }
