@@ -68,6 +68,7 @@ header{
     column-gap: 3em;
 }
 
+
 @media screen and (max-width: 800px){
     header{
         flex-direction: column;
@@ -143,6 +144,7 @@ main{
     font-size: 1.3em;
     padding: 0 8vw;
     width: 100vw;
+    column-gap: 3em;
 }
 
 em{
@@ -153,21 +155,21 @@ em{
     color: rgb(84, 152, 84)
 }
 
+#project-section{
+    margin-top: 5em;
+}
+
 .section-container{
     margin-bottom: 5em;
     padding: 0 2vw;
     position: relative;
 }
 
-#projects-section{
-    margin-top: 5em;
-}
-
 #projects-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    justify-content: space-between;
+    column-gap: 2em;
 }
 
 #projects-list li{
