@@ -4,14 +4,16 @@
     <title>Obochina Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
-    <script src="displayComic.js">
+    <script>
         const iframe = document.getElementById("comic-frame");
         const comicDiv = iframe.contentWindow.document.getElementsByTagName("div")[0];
         console.log(comicDiv);
+        console.log("aa");
     </script>
 </head>
-<body>
 
+<body>
+    
     <header id="header">
         <div id="header-text">
             <h1 id="my-name">Aleksandr Mikhailov</h1>
@@ -93,25 +95,25 @@
                 Contact me
             </h2>
             <ul id="links-list">
-                <li><a href="https://t.me/ob0china"><img id="tg-icon" src="./images/telegram.svg" alt="tg-icon"></a></li>
-                <li><a href="https://github.com/sasaSilver"><img id="gh-icon" src="./images/github.svg" alt="github-icon"></a></li>
-                <li><a href="mailto:mhlvsasha@gmail.com"><img id="email" src="./images/gmail.svg" alt="email"></a></li>
+                <li><a href="https://t.me/ob0china" target="_blank"><img id="tg-icon" src="./images/telegram.svg" alt="tg-icon"></a></li>
+                <li><a href="https://github.com/sasaSilver" target="_blank"><img id="gh-icon" src="./images/github.svg" alt="github-icon"></a></li>
+                <li><a href="mailto:mhlvsasha@gmail.com" target="_blank"><img id="email" src="./images/gmail.svg" alt="email"></a></li>
             </ul>
         </div>
     </main>
 
     <nav class="navbar-list">
         <img id="menu-icon" src="./images/menu-icon.png" alt="menu-icon">
-        <a class="hover-yellow"href="#header">
+        <a class="hover-yellow" href="#header">
             Home
         </a>
-        <a class="hover-yellow"href="#about-section">
+        <a class="hover-yellow" href="#about-section">
             About
         </a> 
-        <a class="hover-yellow"href="#projects-section">
+        <a class="hover-yellow" href="#projects-section">
             Portfolio
         </a> 
-        <a class="hover-yellow"href="#links-section">
+        <a class="hover-yellow" href="#links-section">
             Contacts
         </a>
          <a id="comic-link" href="comic.html" target="_blank">
