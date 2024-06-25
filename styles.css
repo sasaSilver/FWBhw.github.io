@@ -165,14 +165,14 @@ em{
     position: relative;
 }
 
-#projects-list{
+.projects-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     column-gap: 2em;
 }
 
-#projects-list li{
+.projects-list li{
     max-width: 18em;
     display: grid;
     grid-template-rows: subgrid;
@@ -183,7 +183,7 @@ em{
     color: var(--blue);
 }
 
-#skills-container{
+.skills-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -192,14 +192,14 @@ em{
     font-family: 'Courier New', Courier, monospace;
 }
 
-#skills-container li{
+.skills-container li{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
-#skills-container img{
+.skills-container img{
     width: 4.5em;
     margin: 1em 1.5em;
     margin-bottom: .5rem;
@@ -218,7 +218,7 @@ em{
     background-color: rgb(207, 231, 221);
 }
 
-#about-text-container {
+.about-text-container {
     max-width: 25em;
 }
 
@@ -233,16 +233,22 @@ em{
     background-image: linear-gradient(white, var(--beige), var(--beige));
 }
 
-#links-list{
+.links-list{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#links-list img{
+.links-list img{
     width: 3em;
     margin: 1em;
     cursor: pointer;
+    transition: .1s ease-in-out;
+
+}
+
+.links-list img:hover{
+    scale: 1.2;
 }
 
 .navbar-list{
@@ -274,15 +280,15 @@ em{
     transition: .1s ease-in
 }
 
-#comic-link{
+.comic-link{
     background-color: rgb(253, 191, 191);
 }
 
-#comic-link:hover {
+.comic-link:hover {
     background-color: rgb(219, 157, 157);
 }
 
-#comic-frame{
+.comic-frame{
     width: 50vw;
     position: fixed;
     left: 50%;
