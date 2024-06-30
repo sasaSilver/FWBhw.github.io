@@ -1,3 +1,5 @@
+import {formatDistanceToNow} from 'date-fns'
+
 interface ComicResponse {
     img: string;
     alt: string;
@@ -16,7 +18,7 @@ async function fetchComicId(email: string): Promise<string> {
     return comicId;
 }
 
-async function fetchComicData(email: string): Promise<ComicResponse> {
+async function fetchComicData(email: string): Promise<ComicResponse>{
     const comicId: string = await fetchComicId(email);
     const searchParams = new URLSearchParams({
         id: comicId
@@ -32,13 +34,18 @@ async function displayComic(email: string): Promise<void> {
     imgElement.alt = comicData.alt;
     const titleElement: HTMLHeadingElement = document.createElement("h1");
     titleElement.textContent = comicData.safe_title;
-    const imgDate: Date = new Date(comicData.year, comicData.month, comicData.day);
+    const imgDate: Date = new Date(comicData.year, comicData.month - 1, comicData.day);
     const dateElement: HTMLParagraphElement = document.createElement("p");
     dateElement.textContent = imgDate.toLocaleDateString();
+    const releaseDate: Date = new Date(comicData.year, comicData.month - 1, comicData.day)
+    const timeAgo: string = formatDistanceToNow(releaseDate);
+    const timeAgoElement: HTMLParagraphElement = document.createElement("p");
+    timeAgoElement.textContent = timeAgo + " ago";
     const comicContainer: HTMLDivElement = document.createElement("div");
     comicContainer.appendChild(imgElement);
     comicContainer.appendChild(titleElement);
     comicContainer.appendChild(dateElement);
+    comicContainer.appendChild(timeAgoElement);
     document.body.appendChild(comicContainer);
 }
 

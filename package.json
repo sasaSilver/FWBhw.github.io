@@ -1,8 +1,18 @@
 {
   "dependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "date-fns": "^3.6.0",
     "typescript": "^5.5.2"
   },
+  "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.6.3"
   }
 }
