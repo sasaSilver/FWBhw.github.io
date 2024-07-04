@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/FWBhw.github.io/static/css/main.24c569a7.css",
+    "main.js": "/FWBhw.github.io/static/js/main.2936d90f.js",
+    "static/media/spongebob.png": "/FWBhw.github.io/static/media/spongebob.6275554e78c747357b05.png",
+    "static/media/pfp.jpg": "/FWBhw.github.io/static/media/pfp.3a4aaae49937f7a88fb2.jpg",
+    "static/media/menu-icon.png": "/FWBhw.github.io/static/media/menu-icon.ef6fd86280acd3c54271.png",
+    "static/media/SQLite.svg": "/FWBhw.github.io/static/media/SQLite.0b8253af823f692b25cc0c47864c40f6.svg",
+    "static/media/Java-Light.svg": "/FWBhw.github.io/static/media/Java-Light.76016987bb8232e257a6187980dab1cf.svg",
+    "static/media/React-Light.svg": "/FWBhw.github.io/static/media/React-Light.859310e341351502b4a2a19a19f7ad32.svg",
+    "static/media/Python-Light.svg": "/FWBhw.github.io/static/media/Python-Light.2b3e1cac446d5c43d147be232d2108af.svg",
+    "static/media/CPP.svg": "/FWBhw.github.io/static/media/CPP.0170491bcee6df72d47e4c10e0fa8b90.svg",
+    "static/media/github.svg": "/FWBhw.github.io/static/media/github.3b21c250a99986431958daaa9246a45a.svg",
+    "static/media/telegram.svg": "/FWBhw.github.io/static/media/telegram.4bcc26c0602dc9b0238120d34f208343.svg",
+    "static/media/CSS.svg": "/FWBhw.github.io/static/media/CSS.6c7908e02fa11016d13905e451c5e1e8.svg",
+    "static/media/arrow.svg": "/FWBhw.github.io/static/media/arrow.1edfab86f389055c97b80ec14e52f85c.svg",
+    "static/media/HTML.svg": "/FWBhw.github.io/static/media/HTML.ca0db580ffd74f086f2dc2a71dacd660.svg",
+    "index.html": "/FWBhw.github.io/index.html",
+    "static/media/gmail.svg": "/FWBhw.github.io/static/media/gmail.f12319849e28413aaa94f1c11fd35eef.svg",
+    "main.24c569a7.css.map": "/FWBhw.github.io/static/css/main.24c569a7.css.map",
+    "main.2936d90f.js.map": "/FWBhw.github.io/static/js/main.2936d90f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24c569a7.css",
+    "static/js/main.2936d90f.js"
+  ]
+}
