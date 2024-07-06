@@ -1,10 +1,10 @@
+'use client'
 import React, { FC } from 'react'
 import {formatDistanceToNow} from 'date-fns'
 import {useEffect,useState} from 'react'
-interface emailProps{
-  email: string;
-}
-const Comic:FC<emailProps> = (props: emailProps) => {
+import Image from 'next/image'
+import Footer from '../Footer/page'
+const Comic:FC<{}> = (props: {}) => {
 
   interface ComicResponse {
     img: string;
@@ -65,20 +65,28 @@ const Comic:FC<emailProps> = (props: emailProps) => {
 
   useEffect(() => {
     const fetchComicData = async () => {
-      const newComicData = await getContainedComic(props.email);
+      const newComicData = await getContainedComic("al.mikhailov@innopolis.university");
       setComicData(newComicData);
     };
 
     fetchComicData();
-  }, [props.email]);
+  }, []);
 
   return (
-    <div className='comic-container'>
-    <img src={comicData.imgSrc} alt={comicData.imgAlt} />
-    <h2> {comicData.title} </h2>
-    <p> {comicData.date} </p>
-    <p> {comicData.timeAgo} </p>
-    </div>
+    <>
+      <div className='comic-container'>
+        <img
+        src={comicData.imgSrc}
+        alt={comicData.imgAlt}
+        width={463.99}
+        height={154.03}
+        />
+        <h2> {comicData.title} </h2>
+        <p> {comicData.date} </p>
+        <p> {comicData.timeAgo} </p>
+      </div>
+      <Footer />
+    </>
   );
 }
 

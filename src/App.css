@@ -51,11 +51,9 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 2em;
     overflow-x: hidden;
     height: 100%;
     width: 100%;
-    margin-bottom: .5em;
 }
 
 header{
@@ -70,6 +68,7 @@ header{
     align-items: center;
     align-self: center;
     column-gap: 3em;
+    margin-top: -2em;
 }
 
 
@@ -87,7 +86,7 @@ header{
 #pfp{
     border-radius: 50%;
     width: 9em;
-    height: 9em;
+    height: auto;
 }
 
 #my-name{
@@ -135,6 +134,7 @@ header{
 
 #arrow{
     width: .8em;
+    height: auto;
     animation: MoveUpDown 1s ease-in-out infinite;
 }
 
@@ -149,6 +149,7 @@ main{
     padding: 0 8vw;
     width: 100vw;
     column-gap: 3em;
+    margin-bottom: 2em;
 }
 
 em{
@@ -164,7 +165,7 @@ em{
 }
 
 .section-container{
-    margin-bottom: 5em;
+    margin: auto;
     padding: 0 2vw;
     position: relative;
 }
@@ -207,6 +208,7 @@ em{
     width: 4.5em;
     margin: 1em 1.5em;
     margin-bottom: .5rem;
+    height: auto;
 }
 
 #about-section > div{
@@ -228,13 +230,6 @@ em{
     margin-bottom: 1em;
 }
 
-#links-section{
-    margin: 0 -8vw;
-    padding: 0 8vw;
-    width: 100vw;
-    background-image: linear-gradient(white, var(--beige), var(--beige));
-}
-
 .links-list{
     display: flex;
     justify-content: center;
@@ -243,10 +238,10 @@ em{
 
 .links-list img{
     width: 3em;
+    height: auto;
     margin: 1em;
     cursor: pointer;
     transition: .1s ease-in-out;
-
 }
 
 .links-list img:hover{
@@ -267,7 +262,7 @@ em{
 
 #menu-icon {
     width: 2.5em;
-    height: 2.5em;
+    height: auto;
     display: block;
 }
 
@@ -278,34 +273,33 @@ em{
     justify-content: center;
     padding: .5rem;
     height: 1.5em;
-    transition: .1s ease-in
+    transition: .1s ease-in;
 }
 
-.comic-link-off{
+.comic-linkf{
     background-color: rgb(253, 191, 191);
 }
 
-.comic-link-on{
+.comic-link:hover{
     background-color: rgb(219, 157, 157);
 }
 
 .comic-container {
-    background-color: var(--beige);
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 20%;
-    left: 50%;
     height: fit-content;
     width: 30em;
-    outline: 2px solid;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .comic-container > img {
     max-width: 100%;
     height: auto;
 }
-

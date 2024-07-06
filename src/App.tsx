@@ -1,22 +1,16 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import ProjectSection from './components/ProjectSection';
-import SkillsSection from './components/SkillsSection';
-import AboutSection from './components/AboutSection';
-import LinkSection from './components/LinkSection';
-import Footer from './components/Footer';
+import Header from './app/Header/page';
+import ProjectSection from './app/Projects/page';
+import SkillsSection from './app/Skills/page';
+import AboutSection from './app/About/page';
+import Contacts from './app/Contacts/page';
+import Footer from './app/Footer/page';
 
 function App() {
   return (
     <>
-    <Header/>
-    <main>
-      <ProjectSection/>
-      <SkillsSection/>
-      <AboutSection/>
-      <LinkSection/>
-    </main>
+    <Header />
     <Footer/>
     </>
   );

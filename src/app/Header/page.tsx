@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
-import pfp from './images/pfp.jpg'
-import arrowButton from './images/arrow.svg'
-
+import pfp from 'public/images/pfp.jpg'
+import Image from 'next/image'
 
 const Header:FC<{}> = () => {
   return (
@@ -13,10 +12,7 @@ const Header:FC<{}> = () => {
                 <p id="soon-to-be">soon to be i hope lol :)</p>
             </div>
         </div>
-        <img id="pfp" src={pfp} alt="me"/>
-        <a id="arrow-button" href="#projects-section">
-            <img id="arrow" src={arrowButton} alt="down-arrow"/>
-        </a>
+        <Image id="pfp" src={pfp} alt="me"/>
     </header>
   );
 }
