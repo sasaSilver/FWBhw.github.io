@@ -1,5 +1,5 @@
 'use client'
-import React, {FC, useState} from 'react'
+import React, {FC} from 'react'
 import menu_icon from 'public/images/menu-icon.png'
 import Link from 'next/link'
 import Image from 'next/image'

@@ -2,7 +2,6 @@
 import React, { FC } from 'react'
 import {formatDistanceToNow} from 'date-fns'
 import {useEffect,useState} from 'react'
-import Image from 'next/image'
 import Footer from '../Footer/page'
 const Comic:FC<{}> = (props: {}) => {
 
