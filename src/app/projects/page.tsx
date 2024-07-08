@@ -1,39 +1,34 @@
-import React from "react";
-import Link from "next/link";
-import styles from "../styles/projects.module.css";
-
-const ProjectsPage: React.FC = () => {
+import React, { FC } from 'react'
+const ProjectSection:FC<{}> = () => {
   return (
-    <div className={styles.mainDiv}>
-      <ul style={{ padding: "5%", textAlign: "left" }}>
-        <li>
-          c# anonymous
-          <Link href="https://github.com/essence-666/c-AnonBot">
-            <a className="links" target="_blank" rel="noopener noreferrer">
-              telegram-bot
-            </a>
-          </Link>
-        </li>
-        <li>
-          python ask/answer
-          <Link href="https://github.com/essence-666/flaskwebproject">
-            <a className="links" target="_blank" rel="noopener noreferrer">
-              web-site
-            </a>
-          </Link>
-        </li>
-        <li>
-          python
-          <Link href="https://github.com/essence-666/scrapperbottg">
-            <a className="links" target="_blank" rel="noopener noreferrer">
-              telegram-bot
-            </a>
-          </Link>
-          schedulling parsing
-        </li>
-      </ul>
-    </div>
-  );
-};
+    <><div id="projects-section" className="section-container">
+          <h2>My projects</h2>
+          <ul className="projects-list">
+              <li>
+                  <p>
+                      Room booking telegram bot
+                      <u><a href="https://github.com/sasaSilver/BookingBot">→</a></u>
+                  </p>
+                  <p>
+                      While working on this project, I am learning <em className="blue">aiogram</em> and
+                      <em className="blue"> SQLite</em> for creating simple and cool <em className="blue"> telegram bots</em>!
+                  </p>
+              </li>
 
-export default ProjectsPage;
+              <li>
+                  <p>
+                      Turn-based text adventure battle game
+                      <u><a href="https://github.com/sasaSilver/BookingBot">→</a></u>
+                  </p>
+                  <p>
+                      Made this little silly game while learning design patterns with
+                      <em className="blue"> C++</em>!
+                  </p>
+              </li>
+          </ul>
+      </div>
+      </>
+  )
+}
+
+export default ProjectSection

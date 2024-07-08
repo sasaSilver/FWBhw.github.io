@@ -1,59 +1,93 @@
-import React from "react";
-import { format } from "date-fns";
-import styles from "../styles/comic.module.css";
-import Image from "next/image";
-
-interface Comic {
-  id: number;
-  day: number;
-  month: number;
-  year: number;
-  img: string;
-  alt: string;
-  title: string;
-  safe_title: string;
+'use client'
+import React, { FC } from 'react'
+import {formatDistanceToNow} from 'date-fns'
+import {useEffect,useState} from 'react'
+interface emailProps{
+  email: string;
 }
+const Comic:FC<emailProps> = (props: emailProps) => {
 
-const fetchID = async (): Promise<number> => {
-  const url: string = "https://fwd.innopolis.university/api/hw2";
-  const params = new URLSearchParams({
-    email: "e.belozerov@innopolis.university",
-  });
-  const response = await fetch(`${url}?${params.toString()}`);
-  const data = await response.json();
-  return data;
-};
-
-const fetchCOMIC = async (id: number): Promise<Comic> => {
-  const url = "https://fwd.innopolis.university/api/comic";
-  const params = new URLSearchParams({ id: id.toString() });
-  const response = await fetch(`${url}?${params.toString()}`);
-  const data = await response.json();
-  return data;
-};
-
-const ComicPage = async () => {
-  const id = await fetchID();
-  const comic = await fetchCOMIC(id);
-
-  if (!comic) {
-    return <div>Loading...</div>;
+  interface ComicResponse {
+    img: string;
+    alt: string;
+    safe_title: string;
+    day: number;
+    month: number;
+    year: number;
   }
 
-  const date = format(
-    new Date(comic.year, comic.month - 1, comic.day),
-    "MMM d, yyyy",
-  );
+  async function fetchComicId(email: string): Promise<string> {
+      const searchParams : URLSearchParams = new URLSearchParams({
+          email: email
+      });
+      const response: Response = await fetch("https://fwd.innopolis.university/api/hw2?" + searchParams);
+      const comicId: string = await response.json();
+      return comicId;
+  }
+
+  async function fetchComicData(email: string): Promise<ComicResponse>{
+      const comicId: string = await fetchComicId(email);
+      const searchParams = new URLSearchParams({
+          id: comicId
+      });
+      const comicData: Response = await fetch("https://fwd.innopolis.university/api/comic?" + searchParams);
+      return comicData.json();
+  }
+
+  interface ComicData{
+    imgSrc: string;
+    imgAlt: string;
+    title: string;
+    date: string;
+    timeAgo: string;
+  }
+
+  const [comicData, setComicData] = useState({
+    imgSrc: '',
+    imgAlt: '',
+    title: '',
+    date: '',
+    timeAgo: ''
+  });
+
+  async function getContainedComic(email: string): Promise<ComicData> {
+      const comicData: ComicResponse = await fetchComicData(email);
+      const imgDate: Date = new Date(comicData.year, comicData.month - 1, comicData.day);
+      const formattedDate: string = imgDate.toLocaleDateString();
+      const timeAgo: string = formatDistanceToNow(imgDate);
+      return {
+        imgSrc: comicData.img,
+        imgAlt: comicData.alt,
+        title: comicData.safe_title,
+        date: formattedDate,
+        timeAgo: timeAgo + " ago"
+      }
+  }
+
+  useEffect(() => {
+    const fetchComicData = async () => {
+      const newComicData = await getContainedComic("al.mikhailov@innopolis.university");
+      setComicData(newComicData);
+    };
+
+    fetchComicData();
+  }, []);
 
   return (
-    <div className={styles.cont} id="image-container">
-      <div>
-        <h3>{comic.safe_title}</h3>
-        <img src={comic.img} alt={comic.alt} width={500} height={500} />
-        <h3>{date}</h3>
+    <>
+      <div className='comic-container'>
+        <img
+        src={comicData.imgSrc}
+        alt={comicData.imgAlt}
+        width={463.99}
+        height={154.03}
+        />
+        <h2> {comicData.title} </h2>
+        <p> {comicData.date} </p>
+        <p> {comicData.timeAgo} </p>
       </div>
-    </div>
+    </>
   );
-};
+}
 
-export default ComicPage;
+export default Comic
