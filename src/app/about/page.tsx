@@ -10,7 +10,7 @@ const AboutSection:FC<{}> = () => {
                       Currently I am studying Front-end Web development and UX/UI design.
                   </p>
                   <p>
-                      Other than coding, I play drums in the "Grunge Girls" band,
+                      Other than coding, I play drums in the &quot;Grunge Girls&quot; band,
                       work as a private English tutor, and study Japanese!
                   </p>
                   <p>
