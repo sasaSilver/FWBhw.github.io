@@ -6,7 +6,7 @@ const Footer:FC<{}> = () => {
   return (
     <>
     <nav className="navbar-list">
-          <img id="menu-icon" src="/images/menu-icon.png" alt="menu-icon" />
+          <img id="menu-icon" src="images/menu-icon.png" alt="menu-icon" />
           <Link className="hover-yellow" href="/">
             Home
           </Link>

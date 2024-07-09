@@ -18,7 +18,7 @@ const AboutSection:FC<{}> = () => {
                   </p>
               </div>
               <div>
-                  <img src="/images/spongebob.png" alt="my-photo" width="200" />
+                  <img src="images/spongebob.png" alt="my-photo" width="200" />
                   <div className="meme-text">me irl</div>
               </div>
           </div>
