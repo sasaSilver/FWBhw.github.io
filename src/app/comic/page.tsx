@@ -3,10 +3,7 @@ import React, { FC } from 'react'
 import {formatDistanceToNow} from 'date-fns'
 import {useEffect,useState} from 'react'
 
-type emailProps = {
-  email: string;
-}
-const Comic:FC<emailProps> = (props: emailProps) => {
+const Comic:FC<{}> = (props: {}) => {
 
   interface ComicResponse {
     img: string;
