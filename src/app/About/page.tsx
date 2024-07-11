@@ -1,9 +1,12 @@
+import Head from "next/head";
 import React, { FC } from "react";
-export const runtime = "edge";
 
 const AboutSection: FC<{}> = () => {
   return (
     <>
+    <Head>
+      <title>About</title>
+    </Head>
       <div id="about-section" className="section-container">
         <h2>About me</h2>
         <div>

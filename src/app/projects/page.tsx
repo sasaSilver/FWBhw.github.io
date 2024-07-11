@@ -1,8 +1,12 @@
+import Head from "next/head";
 import React, { FC } from "react";
-export const runtime = "edge";
 const ProjectSection: FC<{}> = () => {
   return (
     <>
+    <Head>
+      <title>Projects</title>
+      <meta name="author" content="Aleksandr Mikhailov"></meta>
+    </Head>
       <div id="projects-section" className="section-container">
         <h2>My projects</h2>
         <ul className="projects-list">

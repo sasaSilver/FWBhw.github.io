@@ -1,6 +1,5 @@
 import React from "react";
-export const runtime = "edge";
-const page = () => {
+const GlobalHeader = () => {
   return (
     <div className="global-header">
       Aleksandr Mikhailov
@@ -9,4 +8,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default GlobalHeader;

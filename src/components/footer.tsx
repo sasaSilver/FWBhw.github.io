@@ -1,7 +1,6 @@
 "use client";
 import React, { FC } from "react";
 import Link from "next/link";
-export const runtime = "edge";
 const Footer: FC<{}> = () => {
   return (
     <>

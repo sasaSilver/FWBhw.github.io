@@ -1,8 +1,11 @@
+import Head from "next/head";
 import React from "react";
-export const runtime = "edge";
 const Contacts = () => {
   return (
     <>
+    <Head>
+      <title>Contacts</title>
+    </Head>
       <div id="links-section" className="section-container">
         <h2>Contact me</h2>
         <ul className="links-list">
