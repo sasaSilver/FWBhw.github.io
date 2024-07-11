@@ -1,25 +1,22 @@
 import React, { ReactNode } from "react";
-import Footer from './Footer/page';
-import GlobalHeader from './GlobalHeader/page'
+import Footer from "./Footer/page";
+import GlobalHeader from "./GlobalHeader/page";
 import "./globals.css";
 
-interface LayoutProps{
+interface LayoutProps {
   children: ReactNode;
-};
+}
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-
     <html lang="en">
       <head>
-        <title>Obochina</title>
+        <title>Aleksandr Mikhailov personal page</title>
       </head>
       <body>
         <GlobalHeader />
-        <div className="centered-div">
-        {children}
-        </div>
-        <Footer/>
+        <div className="centered-div">{children}</div>
+        <Footer />
       </body>
     </html>
   );
